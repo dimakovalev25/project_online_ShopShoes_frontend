@@ -19,7 +19,7 @@ services:
       - ./:/var/www
     depends_on:
       - db
-    container_name: app
+    container_name: project_app
   db:
     image: mysql:8.0
     restart: always

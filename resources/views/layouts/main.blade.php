@@ -35,13 +35,13 @@
             <span class="brand-text font-weight-light">Categories</span>
         </a>
 
-        <a href="{{route('category.index')}}" class="brand-link">
+        <a href="{{route('tag.index')}}" class="brand-link">
             <span class="brand-text font-weight-light">Tags</span>
         </a>
 
-        <a href="{{route('category.index')}}" class="brand-link">
-            <span class="brand-text font-weight-light">Users</span>
-        </a>
+{{--        <a href="{{route('category.index')}}" class="brand-link">--}}
+{{--            <span class="brand-text font-weight-light">Users</span>--}}
+{{--        </a>--}}
     </aside>
 
 
