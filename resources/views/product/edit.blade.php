@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                <form method="POST" action="{{ route('product.update', $product) }}">
+                <form method="POST" action="{{ route('product.update', $product) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <div class="card-body">
@@ -30,8 +30,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product preview_image</label>
-                            <input  value="{{$product->preview_image}}" name="preview_image" type="text" class="form-control" placeholder="preview_image">
+                            <label for="exampleInputFile">Choose image</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input name="preview_image" type="file" class="custom-file-input" id="exampleInputFile">
+                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -44,12 +49,27 @@
                             <input value="{{$product->count}}" name="count" type="number" class="form-control" placeholder="count">
                         </div>
 
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Product article</label>
+                            <input value="{{$product->article}}" name="article" type="text" class="form-control" placeholder="description"></input>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Product is_published?</label>
                             <div class="form-check">
                                 <input value="{{$product->is_published}}"  name="is_published" class="form-check-input" type="checkbox">
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product brand</label>
+                            <select value="{{$product->brand}}"  name="brand" multiple="" class="form-control">
+                                @foreach($brands as $brand)
+                                    <option value="{{$brand->id}}">{{$brand->title}}</option>
+                                @endforeach
+
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -63,28 +83,22 @@
                             </select>
                         </div>
 
+                        <div class="form-group">
+                            <label>Product tags</label>
+                            <select  name="tags[]" multiple="" class="form-control">
+                                @foreach($tags as $tag)
+                                    <option value="{{$tag->id}}">{{$tag->title}}</option>
+
+                                @endforeach
+
+                            </select>
+                        </div>
 
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>
-
-{{--                <form method="POST" action="{{ route('product.update', $product) }}">--}}
-{{--                    @csrf--}}
-{{--                    @method('PATCH')--}}
-{{--                    <div class="card-body">--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label for="exampleInputEmail1">Category title</label>--}}
-{{--                            <input value="{{$category->title}}" name="title" type="text" class="form-control" >--}}
-{{--                        </div>--}}
-
-{{--                        <div class="card-footer">--}}
-{{--                            <button type="submit" class="btn btn-primary">Submit</button>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </form>--}}
-
 
             </div>
         </div>

@@ -31,6 +31,10 @@
             <span class="brand-text font-weight-light">Products</span>
         </a>
 
+        <a href="{{route('brand.index')}}" class="brand-link">
+            <span class="brand-text font-weight-light">Brands</span>
+        </a>
+
         <a href="{{route('category.index')}}" class="brand-link">
             <span class="brand-text font-weight-light">Categories</span>
         </a>

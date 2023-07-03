@@ -36,3 +36,14 @@ Route::group(['prefix' => 'products'], function (){
     Route::delete('/{product}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
 
 });
+
+Route::group(['prefix' => 'brands'], function (){
+    Route::get('/', \App\Http\Controllers\Brand\IndexController::class)->name('brand.index');
+    Route::get('/create', \App\Http\Controllers\Brand\CreateController::class)->name('brand.create');
+    Route::post('/', \App\Http\Controllers\Brand\StoreController::class)->name('brand.store');
+    Route::get('/{brand}/edit', \App\Http\Controllers\Brand\EditController::class)->name('brand.edit');
+    Route::get('/{brand}', \App\Http\Controllers\Brand\ShowController::class)->name('brand.show');
+    Route::patch('/{brand}', \App\Http\Controllers\Brand\UpdateController::class)->name('brand.update');
+    Route::delete('/{brand}', \App\Http\Controllers\Brand\DeleteController::class)->name('brand.delete');
+
+});

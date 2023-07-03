@@ -5,15 +5,24 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Products</h1>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <a href="{{route('product.create')}}">Create new product</a>
+                    <h1>brands</h1>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="card card-primary">
+
+        <form method="POST" action="{{ route('brand.store') }}">
+            @csrf
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Add new brand</label>
+                    <input name="title" type="text" class="form-control" placeholder="title">
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <section class="content">
@@ -27,13 +36,9 @@
                                 <table class="table table-hover text-nowrap">
                                     <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Article</th>
-                                        <th>Brand</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Count</th>
+                                        <th>ID </th>
+                                        <th></th>
+                                        <th> Brand</th>
                                         <th></th>
                                         <th></th>
                                         <th></th>
@@ -42,48 +47,33 @@
                                     </thead>
                                     <tbody>
 
-                                    @foreach($products as $product)
+                                    @foreach($brands as $brand)
                                         <tr>
                                             <td>
-                                                {{$product->id}}
+                                                {{$brand->id}}
                                             </td>
+                                            <td></td>
                                             <td>
-                                                {{$product->title}}
-                                            </td>
-                                            <td>
-                                                {{$product->article}}
-                                            </td>
-                                            <td>
-                                                {{$product->brand}}
-                                            </td>
-                                            <td>
-                                                {{$product->description}}
-                                            </td>
-                                            <td>
-                                                {{$product->price}}
-                                            </td>
-                                            <td>
-                                                {{$product->count}}
+                                                {{$brand->title}}
                                             </td>
 
                                             <td>
-                                                <a href="{{route('product.show', $product)}}">
+                                                <a href="{{route('brand.show', $brand)}}">
                                                     <button class="btn btn-info">show</button>
                                                 </a>
                                             </td>
 
                                             <td>
-                                                <a href="{{route('product.edit', $product)}}">
+                                                <a href="{{route('brand.edit', $brand)}}">
                                                     <button class="btn btn-success">edit</button>
                                                 </a>
                                             </td>
 
                                             <td>
-                                                <form method="post"
-                                                      action="{{ route('product.delete', [$product->id]) }}">
+                                                <form method="post" action="{{ route('brand.delete', [$brand->id]) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="btn btn-danger">delete product!!!</button>
+                                                    <button class="btn btn-danger">delete brand!!!</button>
                                                 </form>
                                             </td>
 

@@ -19,7 +19,7 @@
                         <h3 class="card-title">Add new product</h3>
                     </div>
 
-                    <form method="POST" action="{{ route('product.store') }}">
+                    <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
@@ -33,8 +33,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Product preview_image</label>
-                                <input name="preview_image" type="text" class="form-control" placeholder="preview_image">
+                                <label for="exampleInputEmail1">Product article</label>
+                                <input name="article" type="text" class="form-control" placeholder="description"></input>
                             </div>
 
                             <div class="form-group">
@@ -55,11 +55,43 @@
                                 </div>
                             </div>
 
+
+                            <div class="form-group">
+                                <label for="exampleInputFile">Choose image</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input name="preview_image" type="file" class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Product brand</label>
+                                <select name="brand" multiple="" class="form-control">
+                                    @foreach($brands as $brand)
+                                        <option value="{{$brand->id}}">{{$brand->title}}</option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label>Product category</label>
                                 <select name="category_id" multiple="" class="form-control">
                                     @foreach($categories as $category)
                                         <option value="{{$category->id}}">{{$category->title}}</option>
+
+                                    @endforeach
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Product tags</label>
+                                <select name="tags[]" multiple="" class="form-control">
+                                    @foreach($tags as $tag)
+                                        <option value="{{$tag->id}}">{{$tag->title}}</option>
 
                                     @endforeach
 

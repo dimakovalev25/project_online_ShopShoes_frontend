@@ -17,11 +17,14 @@ class UpdateRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
-            'preview_image' => 'required|string',
+            'article' => 'nullable',
+            'preview_image' => 'nullable',
             'price' => 'required|integer',
             'count' => 'required|integer',
-            'category_id' => 'required|integer',
-//            'is_published' => 'required',
+            'category_id' => 'required',
+            'tags' => 'required|array',
+            'brand' => 'required',
+            'is_published' => 'nullable',
         ];
     }
 }
