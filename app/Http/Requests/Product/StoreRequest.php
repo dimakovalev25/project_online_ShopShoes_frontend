@@ -21,7 +21,7 @@ class StoreRequest extends FormRequest
             'price' => 'required|integer',
             'count' => 'required|integer',
             'category_id' => 'required',
-            'tags' => 'required|array',
+            'tags' => 'nullable',
             'brand' => 'required',
             'is_published' => 'nullable',
 
