@@ -21,10 +21,11 @@
                             <th>ID</th>
                             <th>Title </th>
                             <th>Description </th>
-                            <th>Preview_image </th>
-                            <th>Is_published </th>
+                            <th>Article </th>
                             <th>Price </th>
                             <th>Count </th>
+                            <th>Preview_image </th>
+                            <th>Is_published </th>
                             <th>Edit </th>
                             <th>Delete </th>
 
@@ -42,10 +43,7 @@
                                 {{$product->description}}
                             </td>
                             <td>
-                                {{$product->preview_image}}
-                            </td>
-                            <td>
-                                {{$product->is_published}}
+                                {{$product->article}}
                             </td>
                             <td>
                                 {{$product->price}}
@@ -53,6 +51,13 @@
                             <td>
                                 {{$product->count}}
                             </td>
+                            <td>
+                                {{$product->preview_image}}
+                            </td>
+                            <td>
+                                {{$product->is_published}}
+                            </td>
+
 
                             <td>
                                 <a href="{{route('product.edit', $product)}}">
