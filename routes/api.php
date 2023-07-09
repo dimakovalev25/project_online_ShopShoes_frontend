@@ -8,4 +8,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('products/filters', \App\Http\Controllers\API\Product\FilterListController::class);
+
 Route::get('/products', \App\Http\Controllers\API\Product\IndexController::class);
+
+Route::get('/categories', \App\Http\Controllers\API\Category\IndexController::class);
+
+Route::get('/tags', \App\Http\Controllers\API\Tag\IndexController::class);
