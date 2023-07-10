@@ -12,7 +12,8 @@ class IndexController extends Controller
 {
     public function __invoke(IndexRequest $request)
     {
-        $products = Product::all();
+//        $products = Product::all();
+        $products = Product::paginate(4);
         return ProductResource::collection($products);
     }
 }

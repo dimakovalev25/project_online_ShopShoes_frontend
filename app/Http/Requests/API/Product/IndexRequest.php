@@ -16,7 +16,8 @@ class IndexRequest extends FormRequest
         return  [
             'categories' => 'nullable|array',
             'prices' => 'nullable',
-            'brands' => 'nullable|array'
+            'brands' => 'nullable|array',
+            'page' => 'required|integer'
         ];
     }
 }
