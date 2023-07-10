@@ -8,11 +8,15 @@ use App\Http\Requests\API\Product\IndexRequest;
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Product;
 
-class IndexController extends Controller
+class FilterProductsController extends Controller
 {
     public function __invoke(IndexRequest $request)
     {
-        $products = Product::all();
+        $data = $request->validated();
+        $filter = app()->make(ProductFilter::class, ['queryParams' => array_filter($data)]);
+        $products = Product::filter($filter)->get();
         return ProductResource::collection($products);
+
+
     }
 }

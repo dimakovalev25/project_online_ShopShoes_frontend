@@ -15,3 +15,5 @@ Route::get('/products', \App\Http\Controllers\API\Product\IndexController::class
 Route::get('/categories', \App\Http\Controllers\API\Category\IndexController::class);
 
 Route::get('/tags', \App\Http\Controllers\API\Tag\IndexController::class);
+
+Route::post('/products/filterproducts', \App\Http\Controllers\API\Product\FilterProductsController::class);

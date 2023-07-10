@@ -9,14 +9,14 @@ class ProductFilter extends AbstractFilter
 
     const CATEGORIES = 'categories';
     const PRICES = 'prices';
-    const TAGS = 'tags';
+    const BRANDS = 'brands';
 
     protected function getCallbacks(): array
     {
         return [
             self::CATEGORIES => [$this, 'categories'],
-            self::TAGS => [$this, 'tags'],
-            self::PRICES => [$this, 'prices']
+            self::PRICES => [$this, 'prices'],
+            self::BRANDS => [$this, 'brands']
         ];
     }
 
@@ -25,17 +25,18 @@ class ProductFilter extends AbstractFilter
         $builder->whereIn('category_id', $value);
     }
 
-    protected function price(Builder $builder, $value)
+
+    protected function brands(Builder $builder, $value)
+    {
+        $builder->whereIn('brand', $value);
+    }
+
+    protected function prices(Builder $builder, $value)
     {
         $builder->whereBetween('price', $value);
 
     }
 
-    protected function tags(Builder $builder, $value)
-    {
-        $builder->whereHas('tags', function ($b) use ($value){
-            $b->whereIn('tag_id', $value);
-        });
-    }
+
 
 }

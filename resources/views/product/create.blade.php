@@ -51,7 +51,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Product is_published?</label>
                                 <div class="form-check">
-                                    <input name="is_published" class="form-check-input" type="checkbox">
+                                    <input name="is_published" class="form-check-input" checked type="checkbox">
                                 </div>
                             </div>
 
