@@ -26,6 +26,17 @@ Route::group(['prefix' => 'tags'], function (){
 
 });
 
+Route::group(['prefix' => 'sizes'], function (){
+    Route::get('/', \App\Http\Controllers\Size\IndexController::class)->name('size.index');
+    Route::get('/create', \App\Http\Controllers\Size\CreateController::class)->name('size.create');
+    Route::post('/', \App\Http\Controllers\Size\StoreController::class)->name('size.store');
+    Route::get('/{size}/edit', \App\Http\Controllers\Size\EditController::class)->name('size.edit');
+    Route::get('/{size}', \App\Http\Controllers\Size\ShowController::class)->name('size.show');
+    Route::patch('/{size}', \App\Http\Controllers\Size\UpdateController::class)->name('size.update');
+    Route::delete('/{size}', \App\Http\Controllers\Size\DeleteController::class)->name('size.delete');
+
+});
+
 Route::group(['prefix' => 'products'], function (){
     Route::get('/', \App\Http\Controllers\Product\IndexController::class)->name('product.index');
     Route::get('/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');

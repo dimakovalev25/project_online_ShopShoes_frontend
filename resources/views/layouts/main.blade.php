@@ -39,6 +39,10 @@
             <span class="brand-text font-weight-light">Categories</span>
         </a>
 
+        <a href="{{route('size.index')}}" class="brand-link">
+            <span class="brand-text font-weight-light">Sizes</span>
+        </a>
+
         <a href="{{route('tag.index')}}" class="brand-link">
             <span class="brand-text font-weight-light">Tags</span>
         </a>

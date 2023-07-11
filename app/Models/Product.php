@@ -25,6 +25,16 @@ class Product extends Model
         return $this->belongsTo(Brand::class, 'brand_id', 'id');
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'product_tags', 'product_id', 'tag_id');
+    }
+
+    public function size()
+    {
+        return $this->belongsToMany(Size::class, 'product_size', 'product_id', 'size_id');
+    }
+
     public function getImageUrlAttribute()
     {
         return url('storage/' . $this->preview_image);

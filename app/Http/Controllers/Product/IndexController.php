@@ -9,6 +9,9 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
+//        $prod = Product::find(2);
+//        dd($prod->size);
+
         $products = Product::all();
         return view('product.index', compact('products'));
     }

@@ -87,14 +87,23 @@
                                 </select>
                             </div>
 
+
+
+                            <div class="form-group">
+                                <label>Product sizes</label>
+                                <select name="sizes[]" multiple="" class="form-control">
+                                    @foreach($sizes as $size)
+                                        <option value="{{$size->id}}">{{$size->size}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label>Product tags</label>
                                 <select name="tags[]" multiple="" class="form-control">
                                     @foreach($tags as $tag)
                                         <option value="{{$tag->id}}">{{$tag->title}}</option>
-
                                     @endforeach
-
                                 </select>
                             </div>
 

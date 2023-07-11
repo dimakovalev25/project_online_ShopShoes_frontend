@@ -16,14 +16,15 @@ class StoreRequest extends FormRequest
         return [
             'title' => 'required|string',
             'description' => 'required|string',
-            'article' => 'nullable',
-            'preview_image' => 'nullable',
+            'article' => 'required|string',
+            'preview_image' => '',
             'price' => 'required|integer',
             'count' => 'required|integer',
-            'category_id' => 'required',
-            'tags' => 'nullable',
-            'brand' => 'required',
-            'is_published' => 'nullable',
+            'category_id' => 'required|integer',
+            'tags' => 'required|array',
+            'sizes' => 'required|array',
+            'brand' => 'required|integer',
+            'is_published' => 'required',
 
         ];
     }

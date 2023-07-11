@@ -6,19 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
     public function up(): void
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('product_size', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('title')->unique();
-            $table->softDeletes();
+            $table->foreignId('size_id')->nullable()->index()->constrained('sizes');
+            $table->foreignId('product_id')->nullable()->index()->constrained('products');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('product_size');
     }
 };

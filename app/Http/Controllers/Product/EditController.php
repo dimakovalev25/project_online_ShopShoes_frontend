@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Size;
 use App\Models\Tag;
 
 class EditController extends Controller
@@ -15,6 +16,7 @@ class EditController extends Controller
         $categories = Category::all();
         $brands = Brand::all();
         $tags = Tag::all();
-        return view('product.edit', compact('product', 'categories', 'brands', 'tags'));
+        $sizes = Size::all();
+        return view('product.edit', compact('product', 'categories', 'brands', 'tags', 'sizes'));
     }
 }
