@@ -16,6 +16,7 @@ class FilterListController extends Controller
         $categories = Category::all();
         $brands = Brand::all();
 
+        
         $tags = Tag::all();
         $maxPrice = Product::orderBy('price', 'DESC')->first()->price;
         $minPrice = Product::orderBy('price', 'ASC')->first()->price;
