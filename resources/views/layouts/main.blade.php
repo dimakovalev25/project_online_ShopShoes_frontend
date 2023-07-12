@@ -16,7 +16,7 @@
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="{{route('main.index')}}" class="brand-link">
-            <h2 class="brand-text font-weight-light">Main page</h2>
+            <h2 class="brand-text font-weight-light">Main page!-</h2>
         </a>
 
         <a href="{{route('category.index')}}" class="brand-link">
