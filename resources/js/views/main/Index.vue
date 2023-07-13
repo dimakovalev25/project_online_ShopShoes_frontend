@@ -1,36 +1,7 @@
 <template>
   <div>
       <main class="overflow-hidden">
-          <!-- newsLetter_popup Start -->
-<!--          <button data-mfp-src="#newsLetter-popup" class="modal-btn d-none"></button>
-          <div id="newsLetter-popup" class="mfp-hide p-4" role="dialog">
-              <div class="row align-items-center justify-content-sm-between">
-                  <div class="col-lg-5 d-lg-block d-none">
-                      <div class="newsLetter-popup__thumb imgenews">
-                          <img src="assets/images/home-three/products-1.jpg" alt="newsletter">
-                      </div>
-                  </div>
-                  <div class="col-lg-7 col-md-8 col-sm-10">
-                      <div class="newsLetter-popup__content mb-4">
-                          <div class="text-center"><a href="/" class="logo"> <img
-                                  src="assets/images/logo/logo1.png" alt="logo"> </a>
-                              <h2> Join <span>with us.</span></h2>
-                              <p> Subscribe to receive news from Karte In a free hour </p>
-                          </div>
-                          <form action="#0" class="newsLetter-popup__subscrib-form">
-                              <div class="input_box"><input type="email" placeholder="Enter your email Address"
-                                                            name="email">
-                                  <button type="submit" class="subscribe_btn"> Submit</button>
-                              </div>
-                              <div class="form-group "><input type="checkbox" id="html"> <label for="html"> By providing
-                                  my information, I agree to Karte <a href="#0"> Privacy Policy</a> and <a href="#0">
-                                      Legal Statement</a> </label></div>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>-->
-          <!--Start Products Six-->
+
           <section class="products-three pt-60 pb-60 overflow-hidden">
               <div class="auto-container container">
                   <div class="section-header style3 text-center wow fadeInUp animated">
@@ -45,8 +16,8 @@
                                   <li class="products-three-single wow fadeInUp animated">
                                       <div class="products-three-single-img">
                                           <a href="shop-details-3.html" class="d-block"> <img
-                                                  src="assets/images/home-three/productss2-1.jpg" class="first-img"
-                                                  alt=""/> <img src="assets/images/home-three/productss2-hover-1.png"
+                                                  src="/assets/images/home-three/productss2-1.jpg" class="first-img"
+                                                  alt=""/> <img src="/assets/images/home-three/productss2-hover-1.png"
                                                                 alt="" class="hover-img"/> </a>
                                           <div class="products-grid-one__badge-box"> <span
                                                   class="bg_base badge new ">New</span></div>
@@ -75,32 +46,32 @@
                                                                   <ul>
                                                                       <li class="tab-nav popup-product-thumb"><a
                                                                               href="#tabb1"> <img
-                                                                              src="assets/images/shop/products-v6-img5.jpg"
+                                                                              src="/assets/images/shop/products-v6-img5.jpg"
                                                                               alt=""/> </a></li>
                                                                       <li class="tab-nav popup-product-thumb "><a
                                                                               href="#tabb2"> <img
-                                                                              src="assets/images/shop/products-v6-img6.jpg"
+                                                                              src="/assets/images/shop/products-v6-img6.jpg"
                                                                               alt=""/> </a></li>
                                                                       <li class="tab-nav popup-product-thumb "><a
                                                                               href="#tabb3"> <img
-                                                                              src="assets/images/shop/products-v6-img7.jpg"
+                                                                              src="/assets/images/shop/products-v6-img7.jpg"
                                                                               alt=""/> </a></li>
                                                                   </ul>
                                                               </div>
                                                               <div class="popup-product-main-image-box">
                                                                   <div id="tabb1" class="tab-item popup-product-image">
                                                                       <div class="popup-product-single-image"><img
-                                                                              src="assets/images/shop/products-v6-img5.jpg"
+                                                                              src="/assets/images/shop/products-v6-img5.jpg"
                                                                               alt=""/></div>
                                                                   </div>
                                                                   <div id="tabb2" class="tab-item popup-product-image">
                                                                       <div class="popup-product-single-image"><img
-                                                                              src="assets/images/shop/products-v6-img6.jpg"
+                                                                              src="/assets/images/shop/products-v6-img6.jpg"
                                                                               alt=""/></div>
                                                                   </div>
                                                                   <div id="tabb3" class="tab-item popup-product-image">
                                                                       <div class="popup-product-single-image"><img
-                                                                              src="assets/images/shop/products-v6-img7.jpg"
+                                                                              src="/assets/images/shop/products-v6-img7.jpg"
                                                                               alt=""/></div>
                                                                   </div>
                                                                   <button class="prev"><i
@@ -147,13 +118,13 @@
                                                               </div>
                                                           </div>
                                                           <div class="payment-method"><a href="#0"> <img
-                                                                  src="assets/images/payment_method/method_1.png"
+                                                                  src="/assets/images/payment_method/method_1.png"
                                                                   alt=""> </a> <a href="#0"> <img
-                                                                  src="assets/images/payment_method/method_2.png"
+                                                                  src="/assets/images/payment_method/method_2.png"
                                                                   alt=""> </a> <a href="#0"> <img
-                                                                  src="assets/images/payment_method/method_3.png"
+                                                                  src="/assets/images/payment_method/method_3.png"
                                                                   alt=""> </a> <a href="#0"> <img
-                                                                  src="assets/images/payment_method/method_4.png"
+                                                                  src="/assets/images/payment_method/method_4.png"
                                                                   alt=""> </a></div>
                                                       </div>
                                                   </div>
@@ -183,7 +154,7 @@
                           <div
                                   class="newsLetter-one__content-box d-flex align-items-center justify-content-md-start justify-content-center wow fadeInUp animated"
                                   data-wow-delay="0.1s">
-                              <div class="thumb"><img src="assets/images/home-two/envalop.png" alt=""></div>
+                              <div class="thumb"><img src="/assets/images/home-two/envalop.png" alt=""></div>
                               <h3 class="t36"><span>Sign Up For </span> Newsletter </h3>
                           </div>
                       </div>
@@ -219,7 +190,7 @@
                   <div class="row mt--30">
                       <div class="col-xxl-3 col-md-6 mt-30 wow fadeInUp animated " data-wow-delay="0.2s">
                           <div class="core-features__box d-flex ms-0"><span class="one"></span> <span class="two"></span>
-                              <div class="icon"><img src="assets/images/icon/f-icon-1.png" alt=""></div>
+                              <div class="icon"><img src="/assets/images/icon/f-icon-1.png" alt=""></div>
                               <div class="core-features__box-content"><a href="login.html" class="d-block">
                                   <h4> Secure Payment </h4>
                               </a>
@@ -229,7 +200,7 @@
                       </div>
                       <div class="col-xxl-3 col-md-6 mt-30 wow fadeInUp animated " data-wow-delay="0.3s">
                           <div class="core-features__box d-flex "><span class="one"></span> <span class="two"></span>
-                              <div class="icon"><img src="assets/images/icon/f-icon-2.png" alt=""></div>
+                              <div class="icon"><img src="/assets/images/icon/f-icon-2.png" alt=""></div>
                               <div class="core-features__box-content"><a href="login.html" class="d-block">
                                   <h4> 27/7 Fast Delivery </h4>
                               </a>
@@ -239,7 +210,7 @@
                       </div>
                       <div class="col-xxl-3 col-md-6 mt-30 wow fadeInUp animated " data-wow-delay="0.4s">
                           <div class="core-features__box d-flex "><span class="one"></span> <span class="two"></span>
-                              <div class="icon"><img src="assets/images/icon/f-icon-3.png" alt=""></div>
+                              <div class="icon"><img src="/assets/images/icon/f-icon-3.png" alt=""></div>
                               <div class="core-features__box-content"><a href="login.html" class="d-block">
                                   <h4> Return & Refund </h4>
                               </a>
@@ -249,7 +220,7 @@
                       </div>
                       <div class="col-xxl-3 col-md-6 mt-30 wow fadeInUp animated " data-wow-delay="0.5s">
                           <div class="core-features__box d-flex me-0"><span class="one"></span> <span class="two"></span>
-                              <div class="icon"><img src="assets/images/icon/f-icon-4.png" alt=""></div>
+                              <div class="icon"><img src="/assets/images/icon/f-icon-4.png" alt=""></div>
                               <div class="core-features__box-content"><a href="login.html" class="d-block">
                                   <h4> Quality Support </h4>
                               </a>
@@ -277,7 +248,7 @@
                               <div class="review-one__single-review">
                                   <div class="review-one__single-content">
                                       <div class="review-one__aurthor">
-                                          <div class="thumb"><img src="assets/images/testimonial/testimonial-v1-1.png"
+                                          <div class="thumb"><img src="/assets/images/testimonial/testimonial-v1-1.png"
                                                                   alt=""></div>
                                           <span class="quate"> <i
                                                   class="flaticon-right-quotes-symbol"></i> </span>

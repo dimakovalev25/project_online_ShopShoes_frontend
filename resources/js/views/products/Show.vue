@@ -92,7 +92,7 @@ export default {
 
     methods: {
         getProduct(id) {
-            this.axios.get(`http://localhost:8876/api/products/${id}`)
+            this.axios.get(`/api/products/${id}`)
                 .then(res => {
                     this.product = res.data.data;
                     console.log(res)

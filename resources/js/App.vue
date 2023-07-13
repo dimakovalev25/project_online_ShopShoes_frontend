@@ -39,11 +39,15 @@
                                     </form>
                                 </div>
                                 <ul class="page-dropdown-menu">
-                                    <li class="dropdown-list"><a href="#0"> <span>Home </span> <span class="menuarrow"> <i
-                                            class="flaticon-next-1"></i> </span> </a>
+                                    <li class="dropdown-list">
+                                        <a href="/"> <span>Home </span> <span class="menuarrow"> <i
+                                            class="flaticon-next-1"></i> </span>
+                                        </a>
+                                        <a href="/"> <span>Home </span> <span class="menuarrow"> <i
+                                            class="flaticon-next-1"></i> </span>
+                                        </a>
                                         <ul class="dropdown">
-                                            <li><a href="/">Home Page 01</a></li>
-                                            <li><a href="index-2.html">Home Page 02</a></li>
+                                            <li><a href="/">Home Page</a></li>
 
                                         </ul>
                                     </li>
@@ -55,6 +59,8 @@
                                             <li><a href="/">Sneackers</a></li>
                                             <li><a href="/">Adidas</a></li>
                                             <li><a href="/">Nike</a></li>
+                                            <li><a href="/">Puma</a></li>
+                                            <li><a href="/">Puma</a></li>
                                             <li><a href="/">Puma</a></li>
 
                                         </ul>
@@ -146,9 +152,6 @@
                                                             <ul class="dropdown">
                                                                 <li><a href="/">Home Page 01 <sup
                                                                         class="info three">Popular</sup></a></li>
-                                                                <li><a href="index-2.html">Home Page 02 <sup
-                                                                        class="info one">Hot</sup></a>
-                                                                </li>
                                                             </ul>
                                                         </li>
 
@@ -161,6 +164,9 @@
                                                                 <li><a href="/">Adidas</a></li>
                                                                 <li><a href="/">Nike</a></li>
                                                                 <li><a href="/">Puma</a></li>
+                                                                <li><a href="/">Puma</a></li>
+                                                                <li><a href="/">Puma</a></li>
+
 
                                                             </ul>
                                                         </li>

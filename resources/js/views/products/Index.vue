@@ -437,7 +437,7 @@ export default {
         },
 
         getFiltersList() {
-            this.axios.get('http://localhost:8876/api/products/filters')
+            this.axios.get('/api/products/filters')
                 .then(res => {
                     this.filtersList = res.data
                 })
@@ -455,7 +455,7 @@ export default {
 
         },
         getProducts() {
-            this.axios.get('http://localhost:8876/api/products')
+            this.axios.get('/api/products')
                 .then(res => {
                     this.products = res.data.data;
                     this.pagination = res.data.meta;
@@ -465,7 +465,7 @@ export default {
 
 
         getProductFilterList(page = 1) {
-            this.axios.post('http://localhost:8876/api/products/filterproducts', {
+            this.axios.post('/api/products/filterproducts', {
                 'categories': this.categories,
                 'brands': this.brands,
                 'page': page,
@@ -473,7 +473,6 @@ export default {
 
             })
                 .then(res => {
-                    // console.log(this.products);
                     this.products = res.data.data;
                     this.pagination = res.data.meta;
                 })

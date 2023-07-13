@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getProduct: function getProduct(id) {
       var _this = this;
-      this.axios.get("http://localhost:8876/api/products/".concat(id)).then(function (res) {
+      this.axios.get("/api/products/".concat(id)).then(function (res) {
         _this.product = res.data.data;
         console.log(res);
       });

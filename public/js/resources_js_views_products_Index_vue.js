@@ -53,7 +53,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     getFiltersList: function getFiltersList() {
       var _this = this;
-      this.axios.get('http://localhost:8876/api/products/filters').then(function (res) {
+      this.axios.get('/api/products/filters').then(function (res) {
         _this.filtersList = res.data;
       });
     },
@@ -68,7 +68,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     getProducts: function getProducts() {
       var _this2 = this;
-      this.axios.get('http://localhost:8876/api/products').then(function (res) {
+      this.axios.get('/api/products').then(function (res) {
         _this2.products = res.data.data;
         _this2.pagination = res.data.meta;
         // console.log(res)
@@ -77,13 +77,12 @@ __webpack_require__.r(__webpack_exports__);
     getProductFilterList: function getProductFilterList() {
       var _this3 = this;
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      this.axios.post('http://localhost:8876/api/products/filterproducts', {
+      this.axios.post('/api/products/filterproducts', {
         'categories': this.categories,
         'brands': this.brands,
         'page': page,
         'prices': [this.min_price ? this.min_price : 0, this.max_price ? this.max_price : 99999]
       }).then(function (res) {
-        // console.log(this.products);
         _this3.products = res.data.data;
         _this3.pagination = res.data.meta;
       });

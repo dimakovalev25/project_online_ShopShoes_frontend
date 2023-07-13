@@ -1,7 +1,6 @@
 <template>
     <main class="overflow-hidden ">
-        <!--Start Breadcrumb Style2-->
-        <section class="breadcrumb-area" style="background-image: url(src/assets/images/inner-pages/breadcum-bg.png);">
+        <section class="breadcrumb-area" style="background-image: url(assets/images/inner-pages/breadcum-bg.png);">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -9,8 +8,8 @@
                             <h2>Cart</h2>
                             <div class="breadcrumb-menu">
                                 <ul>
-                                    <li><a href="index.html"><i class="flaticon-home pe-2"></i>Home</a></li>
-                                    <li> <i class="flaticon-next"></i> </li>
+                                    <li><a href="index.html"><i class="flaticon-home pe-2"></i>Home!!!</a></li>
+                                    <li><i class="flaticon-next"></i></li>
                                     <li class="active">Cart</li>
                                 </ul>
                             </div>
@@ -19,8 +18,49 @@
                 </div>
             </div>
         </section>
-        <!--End Breadcrumb Style2-->
-        <!--Start cart area-->
+
+        <section class="cart-area pt-120 pb-120">
+            <div class="container">
+                <div class="row pt-120">
+                    <div class="col-xl-6 col-lg-7 wow fadeInUp animated">
+                        <div class="cart-total-box">
+                            <div class="inner-title">
+                                <h3>Enter the data</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="cart-button-box">
+                            <div class="apply-coupon wow fadeInUp animated">
+                                <div class="apply-coupon-input-box mt-30 ">
+                                    <input type="text" v-model="name" placeholder="name">
+                                </div>
+                                <div class="apply-coupon-input-box mt-30 ">
+                                    <input type="text" v-model="address" placeholder="address">
+                                </div>
+                                <div class="apply-coupon-input-box mt-30 ">
+                                    <input type="text" v-model="email" placeholder="email">
+                                </div>
+                                <div class="apply-coupon-button mt-30">
+                                    <button @click.prevent="storeOrder" class="btn--primary style2"
+                                            type="submit">Make a purchase
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cart-button-box-right wow fadeInUp animated">
+                                <button class="btn--primary mt-30"
+                                        type="submit">Continue Shopping
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="cart-area pt-120 pb-120">
             <div class="container">
                 <div class="row wow fadeInUp animated">
@@ -40,22 +80,24 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <div class="thumb-box"> <a href="shop-details-1.html" class="thumb">
+                                            <div class="thumb-box"><a href="shop-details-1.html" class="thumb">
                                                 <img src="src/assets/images/shop/cart-product-thumb-1.jpg" alt="">
                                             </a> <a href="shop-details-1.html" class="title">
                                                 <h5> Leather Bag </h5>
-                                            </a> </div>
+                                            </a></div>
                                         </td>
                                         <td>$250.00</td>
                                         <td class="qty">
                                             <div class="qtySelector text-center"> <span class="decreaseQty"><i
-                                                class="flaticon-minus"></i> </span> <input type="number"
-                                                                                           class="qtyValue" value="1" /> <span class="increaseQty"> <i
-                                                class="flaticon-plus"></i> </span> </div>
+                                                    class="flaticon-minus"></i> </span> <input type="number"
+                                                                                               class="qtyValue"
+                                                                                               value="1"/> <span
+                                                    class="increaseQty"> <i
+                                                    class="flaticon-plus"></i> </span></div>
                                         </td>
                                         <td class="sub-total">$500.00</td>
                                         <td>
-                                            <div class="remove"> <i class="flaticon-cross"></i> </div>
+                                            <div class="remove"><i class="flaticon-cross"></i></div>
                                         </td>
                                     </tr>
 
@@ -69,14 +111,23 @@
                     <div class="col-xl-12">
                         <div class="cart-button-box">
                             <div class="apply-coupon wow fadeInUp animated">
-                                <div class="apply-coupon-input-box mt-30 "> <input type="text" name="coupon-code"
-                                                                                   value="" placeholder="Coupon Code"> </div>
-                                <div class="apply-coupon-button mt-30"> <button class="btn--primary style2"
-                                                                                type="submit">Apply Coupon</button> </div>
+                                <div class="apply-coupon-input-box mt-30 "><input type="text" name="coupon-code"
+                                                                                  value="" placeholder="Coupon Code">
+                                </div>
+                                <div class="apply-coupon-button mt-30">
+                                    <button class="btn--primary style2"
+                                            type="submit">Apply Coupon
+                                    </button>
+                                </div>
                             </div>
-                            <div class="cart-button-box-right wow fadeInUp animated"> <button class="btn--primary mt-30"
-                                                                                              type="submit">Continue Shopping</button> <button class="btn--primary mt-30"
-                                                                                                                                               type="submit">Update Cart</button> </div>
+                            <div class="cart-button-box-right wow fadeInUp animated">
+                                <button class="btn--primary mt-30"
+                                        type="submit">Continue Shopping
+                                </button>
+                                <button class="btn--primary mt-30"
+                                        type="submit">Update Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,16 +153,16 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td class="shipping"> Shipping </td>
+                                        <td class="shipping"> Shipping</td>
                                         <td class="selact-box1">
                                             <ul class="shop-select-option-box-1">
-                                                <li> <input type="checkbox" name="free_shipping" id="option_1"
-                                                            checked=""> <label for="option_1"><span></span>Free
-                                                    Shipping</label> </li>
-                                                <li> <input type="checkbox" name="flat_rate" id="option_2"> <label
-                                                    for="option_2"><span></span>Flat Rate</label> </li>
-                                                <li> <input type="checkbox" name="local_pickup" id="option_3">
-                                                    <label for="option_3"><span></span>Local Pickup</label> </li>
+                                                <li><input type="checkbox" name="free_shipping" id="option_1"
+                                                           checked=""> <label for="option_1"><span></span>Free
+                                                    Shipping</label></li>
+                                                <li><input type="checkbox" name="flat_rate" id="option_2"> <label
+                                                        for="option_2"><span></span>Flat Rate</label></li>
+                                                <li><input type="checkbox" name="local_pickup" id="option_3">
+                                                    <label for="option_3"><span></span>Local Pickup</label></li>
                                             </ul>
                                             <div class="inner-text">
                                                 <p>Shipping options will be updated during checkout</p>
@@ -164,7 +215,7 @@
                 </div>
             </div>
         </section>
-        <!--End cart area-->
+
     </main>
 </template>
 
@@ -176,17 +227,43 @@ export default {
         $(document).trigger('init')
     },
 
+    computed: {
+        totalPrice() {
+            let total = 0
+            this.products.forEach(item => {
+                total += item.price
+            })
+            return total
+        }
+    },
 
     data() {
         return {
-            product: [],
+            products: [],
+            name: '',
+            address: '',
+            email: ''
         }
     },
 
 
     methods: {
 
+        storeOrder() {
+            this.axios.post('api/orders', {
+                'products': this.products,
+                'name': this.name,
+                'email': this.email,
+                'address': this.address,
+                'total_price': this.totalPrice
 
+            })
+                .then(res => {
+                    console.log(res)
+
+                })
+            // console.log(this.products, this.name, this.email, this.address, this.totalPrice)
+        }
     },
 
 
